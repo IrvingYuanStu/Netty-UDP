@@ -1,0 +1,11 @@
+syntax = "proto3"
+
+import "irving/Header.proto"
+
+option java_package = "com.irving.udp.proto"
+option java_outer_classname = "DefaultPacket"
+
+message Packet {
+	Header header = 1;
+	string body = 2;
+}

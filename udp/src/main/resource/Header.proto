@@ -1,0 +1,17 @@
+syntax = "proto3"	// protobuf version
+
+option java_package = "com.irving.udp.proto"	// out_class package
+option java_outer_classname = "DefaultHeader"	// out_class name
+
+message Header {
+	int64 sn = 1;	// 序列号
+	int64 ack = 2;	// 确认号
+	sfixed32 ackbits = 3;	// 校验位段
+	ProtoType pt = 4;	// 协议类型
+}
+
+enum ProtoType {	//协议类型枚举
+	HEART = 0;	// 心跳包
+	AUTH = 1;	// 权限认证包
+	DATA = 2;	// 普通数据包
+}
