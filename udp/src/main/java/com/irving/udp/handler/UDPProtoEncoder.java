@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.google.protobuf.MessageLite;
 import com.google.protobuf.MessageLite.Builder;
-import com.irving.udp.proto.UDPPacket;
+import com.irving.udp.proto.pojo.UDPPacket;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageEncoder;

@@ -1,4 +1,4 @@
-package com.irving.udp.proto;
+package com.irving.udp.proto.pojo;
 
 /**
  * 自定义UDP数据包POJO </br>
@@ -12,6 +12,11 @@ public class UDPPacket {
 	private Object content;	// 包裹自定义协议（可以是Byte，也可以是POJO）
 	
 	public UDPPacket() {}
+	
+	public UDPPacket(String dst, Object content) {
+		this.dst = dst;
+		this.content = content;
+	}
 	
 	public UDPPacket(String src, String dst, Object content) {
 		this.src = src;

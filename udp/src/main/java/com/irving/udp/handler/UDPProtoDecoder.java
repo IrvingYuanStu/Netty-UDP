@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.google.protobuf.ExtensionRegistry;
 import com.google.protobuf.MessageLite;
-import com.irving.udp.proto.UDPPacket;
+import com.irving.udp.proto.pojo.UDPPacket;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

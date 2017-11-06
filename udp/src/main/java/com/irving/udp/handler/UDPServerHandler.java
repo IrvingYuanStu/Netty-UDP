@@ -2,7 +2,7 @@ package com.irving.udp.handler;
 
 import com.irving.udp.proto.DefaultHeader;
 import com.irving.udp.proto.DefaultPacket;
-import com.irving.udp.proto.UDPPacket;
+import com.irving.udp.proto.pojo.UDPPacket;
 
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;

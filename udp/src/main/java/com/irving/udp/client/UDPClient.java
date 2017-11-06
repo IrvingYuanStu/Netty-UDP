@@ -7,7 +7,7 @@ import com.irving.udp.proto.DefaultHeader.Header;
 import com.irving.udp.proto.DefaultHeader.ProtoType;
 import com.irving.udp.proto.DefaultPacket;
 import com.irving.udp.proto.DefaultPacket.Packet;
-import com.irving.udp.proto.UDPPacket;
+import com.irving.udp.proto.pojo.UDPPacket;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
