@@ -28,7 +28,7 @@ public class UDPServer {
 			System.out.println("UDP server is starting");
 			
 			// 绑定端口，同步等待成功
-			ChannelFuture f = bootStrap.bind("10.8.10.24", 9900).sync();
+			ChannelFuture f = bootStrap.bind("127.0.0.1", 9900).sync();
 			
 			// 等待服务端关闭
 			f.channel().closeFuture().sync();

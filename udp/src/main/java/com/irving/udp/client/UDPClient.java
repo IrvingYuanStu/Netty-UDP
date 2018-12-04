@@ -15,6 +15,8 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 
+import java.util.Scanner;
+
 /**
  * udp客户端
  */
@@ -39,25 +41,24 @@ public class UDPClient {
 		DefaultHeader.Header.Builder headBuiler = DefaultHeader.Header.newBuilder();
 		
 		int i = 1000;
-//		for (long i = 1000; i<2000L; i++) {
+		Scanner scanner = new Scanner(System.in);
+		while (scanner.hasNext()) {
 			headBuiler.setSn(i);
 			headBuiler.setAck(i - 1);
 			headBuiler.setAckbits(2);
 			headBuiler.setPt(ProtoType.DATA);
-			
+
 			Header header = headBuiler.build();
-			
+
 			packetBuilder.setHeader(header);
-			packetBuilder.setBody("{\"name\":\"周瑜\",\"atk\":90,\"def\":69,\"hp\":210}");
-			
+			packetBuilder.setBody(scanner.nextLine());
+
 			Packet packet = packetBuilder.build();
-			
+
 			UDPPacket udpPacket = new UDPPacket();
 			udpPacket.setContent(packet);
-			udpPacket.setDst("10.8.10.24:9900");
+			udpPacket.setDst("127.0.0.1:9900");
 			ch.writeAndFlush(udpPacket);
-			
-			Thread.sleep(1000);
-//		}
+		}
 	}
 }

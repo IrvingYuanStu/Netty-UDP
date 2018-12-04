@@ -16,7 +16,7 @@ public class ChannelManager {
 	/**
 	 * 玩家IP与channel的关系
 	 */
-	private static final Map<String, Channel> channelMap = new ConcurrentHashMap<>();
+	private static final Map<String, Channel> channelMap = new ConcurrentHashMap<String, Channel>();
 	
 	private static final ChannelManager INSTANCE = new ChannelManager();
 	
