@@ -1,7 +1,6 @@
 package com.irving.tcp.handler;
 
 import com.irving.tcp.SignUpRespProto;
-import com.irving.tcp.bean.SignUpResp;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
 

@@ -1,6 +1,5 @@
 package com.irving.tcp;
 
-import com.irving.tcp.bean.SignUpReq;
 import com.irving.tcp.handler.InitalClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
