@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package tcp;
+
+option java_package = "com.irving.tcp";
+option java_outer_classname = "SignUpReqProto";
+
+message SignUpReq {
+    int32 reqId = 1;    // 请求Id
+    string userCode = 2;    //用户code
+    string password = 3;    //用户密码
+}

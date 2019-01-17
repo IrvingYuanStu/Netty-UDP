@@ -1,7 +1,6 @@
 package com.irving.tcp;
 
 import com.irving.tcp.bean.SignUpReq;
-import com.irving.tcp.bean.SignUpResp;
 import com.irving.tcp.handler.InitalClientHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -26,11 +25,11 @@ public class TcpClient {
         try {
             ChannelFuture channelFuture = bootstrap.connect("localhost", 9900).sync();
 
-            SignUpReq req = new SignUpReq();
-            req.setReqId(1);
-            req.setUserCode("admin");
-            req.setPassWord("123");
-            channelFuture.channel().writeAndFlush(req);
+            SignUpReqProto.SignUpReq.Builder builder = SignUpReqProto.SignUpReq.newBuilder();
+            builder.setReqId(100);
+            builder.setUserCode("admin");
+            builder.setPassword("admin123");
+            channelFuture.channel().writeAndFlush(builder.build());
 
             // 等待收到信号后，再关闭主线程
             channelFuture.channel().closeFuture().sync();
